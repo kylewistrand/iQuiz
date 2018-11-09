@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EEB1BA1221898C6600ADA95D /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB1BA1121898C6600ADA95D /* QuestionViewController.swift */; };
+		EEB1BA142189A7AC00ADA95D /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB1BA132189A7AC00ADA95D /* AppData.swift */; };
+		EEB1BA162189B1E200ADA95D /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB1BA152189B1E200ADA95D /* AnswerViewController.swift */; };
+		EEB1BA182189B74B00ADA95D /* FinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB1BA172189B74B00ADA95D /* FinishedViewController.swift */; };
 		EEEDCEC72186D74C00FDBF4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEDCEC62186D74C00FDBF4D /* AppDelegate.swift */; };
 		EEEDCEC92186D74D00FDBF4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEDCEC82186D74D00FDBF4D /* ViewController.swift */; };
 		EEEDCECC2186D74D00FDBF4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEEDCECA2186D74D00FDBF4D /* Main.storyboard */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EEB1BA1121898C6600ADA95D /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		EEB1BA132189A7AC00ADA95D /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		EEB1BA152189B1E200ADA95D /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
+		EEB1BA172189B74B00ADA95D /* FinishedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedViewController.swift; sourceTree = "<group>"; };
 		EEEDCEC32186D74C00FDBF4D /* iQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEEDCEC62186D74C00FDBF4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEEDCEC82186D74D00FDBF4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,7 +64,11 @@
 			children = (
 				EEEDCEC62186D74C00FDBF4D /* AppDelegate.swift */,
 				EEEDCEC82186D74D00FDBF4D /* ViewController.swift */,
+				EEB1BA132189A7AC00ADA95D /* AppData.swift */,
 				EEEDCECA2186D74D00FDBF4D /* Main.storyboard */,
+				EEB1BA172189B74B00ADA95D /* FinishedViewController.swift */,
+				EEB1BA152189B1E200ADA95D /* AnswerViewController.swift */,
+				EEB1BA1121898C6600ADA95D /* QuestionViewController.swift */,
 				EEEDCECD2186D74D00FDBF4D /* Assets.xcassets */,
 				EEEDCECF2186D74D00FDBF4D /* LaunchScreen.storyboard */,
 				EEEDCED22186D74D00FDBF4D /* Info.plist */,
@@ -135,8 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEB1BA182189B74B00ADA95D /* FinishedViewController.swift in Sources */,
 				EEEDCEC92186D74D00FDBF4D /* ViewController.swift in Sources */,
 				EEEDCEC72186D74C00FDBF4D /* AppDelegate.swift in Sources */,
+				EEB1BA162189B1E200ADA95D /* AnswerViewController.swift in Sources */,
+				EEB1BA1221898C6600ADA95D /* QuestionViewController.swift in Sources */,
+				EEB1BA142189A7AC00ADA95D /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
