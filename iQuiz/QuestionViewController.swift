@@ -66,11 +66,11 @@ class QuestionViewController: UIViewController {
         currentCategoty = appData.quizController.quiz.categories[appData.quizController.currentCategory]
 
         questionNum.text = String(appData.quizController.currentQuestion + 1)
-        questionText.text = currentCategoty.questions[appData.quizController.currentQuestion].text
-        answer1.setTitle(currentCategoty.questions[appData.quizController.currentQuestion].answers[0], for: .normal)
-        answer2.setTitle(currentCategoty.questions[appData.quizController.currentQuestion].answers[1], for: .normal)
-        answer3.setTitle(currentCategoty.questions[appData.quizController.currentQuestion].answers[2], for: .normal)
-        answer4.setTitle(currentCategoty.questions[appData.quizController.currentQuestion].answers[3], for: .normal)
+        questionText.text = currentCategoty.questions[appData.quizController.currentQuestion]!.text
+        answer1.setTitle(currentCategoty.questions[appData.quizController.currentQuestion]!.answers[0], for: .normal)
+        answer2.setTitle(currentCategoty.questions[appData.quizController.currentQuestion]!.answers[1], for: .normal)
+        answer3.setTitle(currentCategoty.questions[appData.quizController.currentQuestion]!.answers[2], for: .normal)
+        answer4.setTitle(currentCategoty.questions[appData.quizController.currentQuestion]!.answers[3], for: .normal)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
