@@ -72,6 +72,12 @@ class QuizController {
         self.currentQuestion = 0
         self.answers = []
     }
+    
+    public func reset(_ currentCategory : Int) {
+        self.currentCategory = currentCategory
+        self.currentQuestion = 0
+        self.answers = []
+    }
 }
 
 class QuizCategoryDataSource : NSObject, UITableViewDataSource {

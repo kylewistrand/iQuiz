@@ -12,14 +12,8 @@ class ViewController: UIViewController, UITableViewDelegate {
     var appData = AppData.shared
 
     @IBOutlet weak var categoriesTable: UITableView!
-    @IBAction func settingsButton(_ sender: Any) {
-        let uiAlert = UIAlertController(title: "Check back for settings!", message: "...", preferredStyle: .alert)
-        uiAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(uiAlert, animated: true, completion: nil)
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        appData.quizController.currentCategory = indexPath.row
+        appData.quizController.reset(indexPath.row)
         
         self.performSegue(withIdentifier: "toQuestion", sender: self)
     }
