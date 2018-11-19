@@ -20,7 +20,7 @@ class FinishedViewController: UIViewController {
         var totalCorrect = 0
         
         for (index, answer) in appData.quizController.answers.enumerated() {
-            if answer == currentCategory.questions[index].answer {
+            if answer == Int(currentCategory.questions[index]!.answer!)! - 1 {
                 totalCorrect += 1
             }
         }

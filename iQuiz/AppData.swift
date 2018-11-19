@@ -8,28 +8,48 @@
 
 import UIKit
 
-class QuizQuestion {
-    let text : String
-    let answer : Int
-    let answers : [String]
+class QuizQuestion: NSObject, NSCoding, NSSecureCoding, Decodable {
+    static var supportsSecureCoding: Bool {
+        get { return true }
+    }
     
-    init(text : String, answer : Int, answers : [String]) {
+    let text : String?
+    let answer : String?
+    let answers : [String?]
+    
+    init(text : String, answer : String, answers : [String]) {
         self.text = text
         self.answer = answer
         self.answers = answers
     }
     
-    init() {
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(text, forKey: "text")
+        aCoder.encode(answer, forKey: "answer")
+        aCoder.encode(answers, forKey: "answers")
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        text = aDecoder.decodeObject(forKey: "text") as? String? ?? "Default Question"
+        answer = aDecoder.decodeObject(forKey: "answer") as? String? ?? "0"
+        answers = aDecoder.decodeObject(forKey: "answers") as? [String?] ?? ["1", "2", "3", "4"]
+    }
+    
+    override init() {
         self.text = "Default Question"
-        self.answer = 0
+        self.answer = "0"
         self.answers = ["1", "2", "3", "4"]
     }
 }
 
-class QuizCategory {
-    let title : String
-    let desc : String
-    let questions : [QuizQuestion]
+class QuizCategory: NSObject, NSCoding, NSSecureCoding, Decodable {
+    static var supportsSecureCoding: Bool {
+        get { return true }
+    }
+    
+    let title : String?
+    let desc : String?
+    let questions : [QuizQuestion?]
     
     init(title : String, desc : String, questions : [QuizQuestion]) {
         self.title = title
@@ -37,7 +57,19 @@ class QuizCategory {
         self.questions = questions
     }
     
-    init() {
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(title, forKey: "title")
+        aCoder.encode(desc, forKey: "desc")
+        aCoder.encode(questions, forKey: "questions")
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        title = aDecoder.decodeObject(forKey: "title") as? String? ?? ""
+        desc = aDecoder.decodeObject(forKey: "desc") as? String? ?? ""
+        questions = aDecoder.decodeObject(forKey: "questions") as? [QuizQuestion?] ?? []
+    }
+    
+    override init() {
         self.title = ""
         self.desc = ""
         self.questions = []
@@ -69,6 +101,12 @@ class QuizController {
         self.quiz = Quiz(quizCategories)
         self.categoryDataSource = QuizCategoryDataSource(self.quiz)
         self.currentCategory = 0
+        self.currentQuestion = 0
+        self.answers = []
+    }
+    
+    public func reset(_ currentCategory : Int) {
+        self.currentCategory = currentCategory
         self.currentQuestion = 0
         self.answers = []
     }

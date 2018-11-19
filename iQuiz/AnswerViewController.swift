@@ -26,11 +26,11 @@ class AnswerViewController: UIViewController {
         super.viewDidLoad()
         let currentQuestion = appData.quizController.quiz.categories[appData.quizController.currentCategory].questions[appData.quizController.currentQuestion]
 
-        questionLabel.text = currentQuestion.text
-        answerLabel.text = currentQuestion.answers[currentQuestion.answer]
+        questionLabel.text = currentQuestion!.text
+        answerLabel.text = currentQuestion!.answers[Int(currentQuestion!.answer!)! - 1]
         
         switch appData.quizController.answers[appData.quizController.currentQuestion] {
-        case currentQuestion.answer:
+        case Int(currentQuestion!.answer!)! - 1:
             correctIncorrectLabel.text = "Correct!"
             break
         default:

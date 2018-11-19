@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE26A994219A52A8002D432A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE26A993219A52A8002D432A /* SettingsViewController.swift */; };
 		EEB1BA1221898C6600ADA95D /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB1BA1121898C6600ADA95D /* QuestionViewController.swift */; };
 		EEB1BA142189A7AC00ADA95D /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB1BA132189A7AC00ADA95D /* AppData.swift */; };
 		EEB1BA162189B1E200ADA95D /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB1BA152189B1E200ADA95D /* AnswerViewController.swift */; };
 		EEB1BA182189B74B00ADA95D /* FinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB1BA172189B74B00ADA95D /* FinishedViewController.swift */; };
+		EEB8F71E219D9EE300959462 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EEB8F71D219D9EE300959462 /* Settings.bundle */; };
 		EEEDCEC72186D74C00FDBF4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEDCEC62186D74C00FDBF4D /* AppDelegate.swift */; };
 		EEEDCEC92186D74D00FDBF4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEDCEC82186D74D00FDBF4D /* ViewController.swift */; };
 		EEEDCECC2186D74D00FDBF4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEEDCECA2186D74D00FDBF4D /* Main.storyboard */; };
@@ -19,10 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE26A993219A52A8002D432A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EEB1BA1121898C6600ADA95D /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		EEB1BA132189A7AC00ADA95D /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		EEB1BA152189B1E200ADA95D /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		EEB1BA172189B74B00ADA95D /* FinishedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedViewController.swift; sourceTree = "<group>"; };
+		EEB8F71D219D9EE300959462 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		EEEDCEC32186D74C00FDBF4D /* iQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEEDCEC62186D74C00FDBF4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEEDCEC82186D74D00FDBF4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,10 +66,12 @@
 		EEEDCEC52186D74C00FDBF4D /* iQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				EEB8F71D219D9EE300959462 /* Settings.bundle */,
 				EEEDCEC62186D74C00FDBF4D /* AppDelegate.swift */,
 				EEEDCEC82186D74D00FDBF4D /* ViewController.swift */,
 				EEB1BA132189A7AC00ADA95D /* AppData.swift */,
 				EEEDCECA2186D74D00FDBF4D /* Main.storyboard */,
+				EE26A993219A52A8002D432A /* SettingsViewController.swift */,
 				EEB1BA172189B74B00ADA95D /* FinishedViewController.swift */,
 				EEB1BA152189B1E200ADA95D /* AnswerViewController.swift */,
 				EEB1BA1121898C6600ADA95D /* QuestionViewController.swift */,
@@ -134,6 +140,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEB8F71E219D9EE300959462 /* Settings.bundle in Resources */,
 				EEEDCED12186D74D00FDBF4D /* LaunchScreen.storyboard in Resources */,
 				EEEDCECE2186D74D00FDBF4D /* Assets.xcassets in Resources */,
 				EEEDCECC2186D74D00FDBF4D /* Main.storyboard in Resources */,
@@ -149,6 +156,7 @@
 			files = (
 				EEB1BA182189B74B00ADA95D /* FinishedViewController.swift in Sources */,
 				EEEDCEC92186D74D00FDBF4D /* ViewController.swift in Sources */,
+				EE26A994219A52A8002D432A /* SettingsViewController.swift in Sources */,
 				EEEDCEC72186D74C00FDBF4D /* AppDelegate.swift in Sources */,
 				EEB1BA162189B1E200ADA95D /* AnswerViewController.swift in Sources */,
 				EEB1BA1221898C6600ADA95D /* QuestionViewController.swift in Sources */,
